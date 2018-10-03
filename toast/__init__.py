@@ -22,7 +22,9 @@ class NotifydNotifier(Notifier):
     """
 
     def notify(self, title, description=None, icon=None):
-        print(self, title)
+        import notify2
+        notify2.init("PYTOAST")
+        notify2.Notification(title, description).show()
 
 
 class WindowsNotifier(Notifier):
@@ -31,7 +33,9 @@ class WindowsNotifier(Notifier):
     """
 
     def notify(self, title, description=None, icon=None):
-        print(self, title)
+        from win10toast import ToastNotifier
+        notifier = ToastNotifier()
+        notifier.show_toast(title, description, duration=4)
 
 
 def notify(title, description=None, icon=None):
