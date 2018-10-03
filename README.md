@@ -1,5 +1,7 @@
 # toast
 
+*Currently broken*, pywin32 has serious installation issues.
+
 An extremely simple cross-platform library for showing toast notifications.
 
 # Installation
